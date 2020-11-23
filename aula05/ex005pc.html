@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Perguntas
+
+      // 1 - como e possivel guarda um valor no prompt de comando dentro de uma variável?
+
+      //const nome = window.prompt("escreva seu nome");
+      //window.alert(`Olá, seu nome é ${nome}`); // metado 1 ES6
+      //window.alert("O seu nome e " + nome); metado 2 JS
+
+      // 2- como e possivel calcular os valores escrito no prompt de comando?
+
+      //const valor1 = Number(window.prompt("escreva um numero"));
+      //const valor2 = Number(window.prompt("escreva um numero"));
+      //const total = valor1 + valor2;
+
+      // window.alert("O resultado é" + total); metado JS
+      // window.alert(` A some entre ${valor1} mais ${valor2} e igual: ${total}`); metado ES6
+
+      // como transforma os dados em letra maiuscular?
+
+      const nome = "Gabriel";
+
+      document.write(`Olá, meu nome e <strong>${nome}</strong> <br> possuir ${
+        nome.length
+      } letras, em
+       minusculo ficar assim ${nome.toLocaleUpperCase()}`);
+
+      //como colocar um valor monetário?
+
+      const valor = 120.8;
+      console.log(
+        valor.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
+      );
+      console.log(valor.toFixed(2).replace(".", ","));
+    </script>
+  </body>
+</html>

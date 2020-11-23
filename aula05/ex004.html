@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Meu Primeiro projeto com Java Scrit</title>
+  </head>
+  <body>
+    <script>
+      //formatando string
+
+      var nome = "Gabriel";
+
+      document.write(
+        ` Olá <strong>${nome} </strong>, seu nome tem ${nome.length} letras! <br />`
+      );
+      document.write(
+        ` Olá seu nome em MAIÚSCULO ficar <strong>${nome.toLocaleUpperCase()} </strong>  <br /> `
+      );
+
+      document.write(
+        ` Olá seu nome em minusculo ficar <strong>${nome.toLocaleLowerCase()}</strong> `
+      );
+
+      // write vai se escrever na dom!
+      // lenght tamanho
+      // Maiúsculo toLocaleUpperCase()
+      // Minúsculo toLocaleLowerCase()
+
+      //formatando numeros
+
+      var numero = 123.8;
+
+      console.log(numero.toFixed(2).replace(".", ","));
+      console.log(
+        numero.toLocaleString("pt-BR", { style: "currency", currency: "BRL" })
+      );
+      console.log(
+        numero.toLocaleString("pt-BR", { style: "currency", currency: "USD" })
+      );
+
+      console.log(
+        numero.toLocaleString("pt-BR", { style: "currency", currency: "EUR" })
+      );
+
+      // toFixed formatar os numeros internos
+      // Formatando os dados para de acordo com moeda:
+      //toLocaleString("pt-BR", { style: "currency", currency: "EUR" })
+    </script>
+  </body>
+</html>
