@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variáveis Composta</title>
+  </head>
+  <body>
+    <script>
+      let number = [5, 2, 3, 4];
+      let frutas = ["maça", "banana", "laranja"];
+
+      /* number.sort(); // organizar os valores em ordem
+      number.push(6); // adicionar valores
+      console.log(number);
+      console.log(`O tamanho do meu vetor e ${number.length}`);
+      console.log(`A primeira posição e ${number[4]}`);
+
+      window.document.write(
+        `Olá, o tamanho do meu vetor e de ${number.length} numeros
+        e primeira posiçåo dele é ${number[0]}.
+        `
+      );
+
+      for (let pos = 0; pos < number.length; pos++) {
+        console.log(`a posição tem ${pos} tem valores ${number[pos]}`);
+      }
+
+      for (pos in number) {
+        console.log(`A posição dele e ${pos} e tem valores ${number[pos]}`);
+      }
+
+      */
+
+      let pos = number.indexOf(8); // verificar de acordo com o valor do array
+
+      if (pos == -1) {
+        console.log("esse posicao não existe no array");
+      } else {
+        console.log(`a posição dele e ${pos}`);
+      }
+    </script>
+  </body>
+</html>
