@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primeiros passos com a Dom</title>
+    <style>
+      body {
+        font: normal 18pt Arial;
+      }
+
+      #msg {
+        height: 200px;
+        width: 200px;
+        background-color: black;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Iniciando os estudos com a Dom</h1>
+    <div id="msg">Clique em mim</div>
+    <script>
+      var divElement = window.document.getElementById("msg");
+
+      //divElement.addEventListener("click", clicar);
+      //divElement.addEventListener("mouseout", sair);
+      //divElement.addEventListener("mouseenter", entrar);
+
+      function clicar() {
+        divElement.style.backgroundColor = "red";
+        divElement.innerText = "clicou!";
+      }
+
+      function sair() {
+        divElement.innerText = "sair!";
+      }
+
+      function entrar() {
+        divElement.innerText = "entrar!";
+      }
+    </script>
+  </body>
+</html>
