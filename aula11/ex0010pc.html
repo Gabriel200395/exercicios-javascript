@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condições Simples</title>
+  </head>
+  <body>
+    <h1>Sistema de Vericação de Pais</h1>
+    Escreva em que pais você mora :
+    <input type="text" name="txtnt" id="txtnt" />
+    <button onclick="naturalidade()">verificar</button>
+    <div id="res"></div>
+    <script>
+      function naturalidade() {
+        var verificar = window.document.getElementById("txtnt");
+        var resposta = window.document.getElementById("res");
+        var pais = verificar.value;
+
+        if (pais != "Brasil") {
+          resposta.innerHTML += `<p>voce é <strong>Estrangeiro</strong></p>`;
+        } else {
+          resposta.innerHTML += `<p>voce é <strong>Brasileiro<strong></p>`;
+        }
+      }
+    </script>
+  </body>
+</html>

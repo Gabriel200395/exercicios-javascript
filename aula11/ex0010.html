@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condições Simples</title>
+  </head>
+  <body>
+    <h1>Sistema de Multar</h1>
+    Escreva o valor da sua velocidade :
+    <input type="number" name="txtvl" id="txtvl" />
+    <button onclick="calcular()">verificar</button>
+    <div id="res"></div>
+    <script>
+      function calcular() {
+        var inputElement = window.document.querySelector("input#txtvl");
+        var resposta = window.document.querySelector("div#res");
+        var velocidade = Number(inputElement.value);
+        if (velocidade > 60) {
+          resposta.innerHTML = `<p>Você passou dos limites de velocidade. <strong>MULTADO</strong></p>`;
+        } else {
+          resposta.innerHTML = `Dirijar sempre com sinto de segurança!`;
+        }
+      }
+    </script>
+  </body>
+</html>
