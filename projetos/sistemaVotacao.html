@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sistema de Votação</title>
+    <style>
+      .texto {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Sistema de Verificação de Eleição</h1>
+    Escreva a sua idade no sistema:<input type="text" name="idade" id="idade" />
+    <button onclick="validacaoDados()">Verificação</button>
+    <div id="res"></div>
+  </body>
+  <script>
+    function validacaoDados() {
+      var idadeElement = window.document.querySelector("input#idade");
+      var resposta = window.document.querySelector("#res");
+      var idade = Number(idadeElement.value);
+      if (idade < 16) {
+        resposta.innerHTML = `<p>Você não tem idade para <strong>votar!<strong></p>`;
+        resposta.classList.add("texto");
+      } else if (idade < 18 || idade >= 65) {
+        resposta.innerHTML = `<p>O seu voto é <strong>opcional!</strong></p>`;
+        resposta.classList.add("texto");
+      } else {
+        resposta.innerHTML = `<p>Você tem obrigação para <strong>votar!</strong></p>`;
+        resposta.classList.add("texto");
+      }
+    }
+  </script>
+</html>
