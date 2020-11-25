@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Funções</title>
+  </head>
+  <body>
+    <script>
+      function calcular(n1, n2) {
+        return n1 + n2;
+      }
+
+      function calcular(n1 = 0, n2 = 0) {
+        return n1 + n2;
+      }
+
+      function parimp(n1) {
+        if (n1 % 2 == 0) {
+          return "par";
+        } else {
+          return "impar";
+        }
+      }
+
+      function fatorial(n1) {
+        if (n1 == 1) {
+          return 1;
+        } else {
+          return n1 * fatorial(n1 - 1);
+        }
+      }
+
+      console.log(fatorial(3));
+      console.log(parimp(2));
+      console.log(calcular(5));
+    </script>
+  </body>
+</html>
