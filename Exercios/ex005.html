@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 04</title>
+  </head>
+  <body>
+    <p>Se o seu genêro é Masculino preenchar os dados abaixo:</p>
+    <label for="">Escreva seu sexo:</label>
+    <input type="text" id="masculino" />
+    <label for="">Escreva sua altura:</label>
+    <input type="text" id="altf" />
+    <p>Se o seu genêro é Mulher preenchar os dados:</p>
+    <label for="">Escreva seu sexo:</label>
+    <input type="text" id="femenino" />
+    <label for="">Escreva sua altura:</label>
+    <input type="text" id="altm" />
+    <br />
+    <button onclick="verificaIdade()">Calcular altura</button>
+    <div id="res"></div>
+    <script>
+      function verificaIdade() {
+        var input1 = window.document.querySelector("input#masculino");
+        var input2 = window.document.querySelector("input#femenino");
+        var input3 = window.document.querySelector("input#altf");
+        var input4 = window.document.querySelector("input#altm");
+        var resposta = window.document.querySelector("div#res");
+
+        var sexoM = input1.value;
+        var sexoF = input2.value;
+        var alturaM = input3.value;
+        var alturaF = input4.value;
+
+        if (alturaM > alturaF) {
+          resposta.innerHTML = `<p> O ${sexoM} tem uma altura maior <strong>${alturaM}</strong></p> `;
+        } else if (alturaF > alturaM) {
+          resposta.innerHTML = `<p> O ${sexoF} tem uma altura maior <strong>${alturaF}</strong></p> `;
+        }
+      }
+    </script>
+  </body>
+</html>
