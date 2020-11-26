@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 02</title>
+  </head>
+  <body>
+    <label for="">Escrva um numero</label>
+    <input type="text" id="num1" />
+    <input type="text" id="num2" />
+    <input type="text" id="num3" />
+    <button onclick="verNumeros()">ver maior numero</button>
+    <div id="res"></div>
+    <script>
+      function verNumeros() {
+        var input1 = window.document.querySelector("input#num1");
+        var input2 = window.document.querySelector("input#num2");
+        var input3 = window.document.querySelector("input#num3");
+        var resposta = window.document.querySelector("div#res");
+
+        var valor1 = input1.value;
+        var valor2 = input2.value;
+        var valor3 = input3.value;
+
+        if (valor1 > valor2) {
+          resposta.innerHTML = `<p>Esse é o maior valor <strong>${valor1}</strong></p>`;
+        } else if (valor2 > valor1 && valor2 > valor3) {
+          resposta.innerHTML = `<p>Esse é o maior valor <strong>${valor2}</strong></p>`;
+        } else {
+          resposta.innerHTML = `<p>Esse é o maior valor <strong>${valor3}</strong></p>`;
+        }
+      }
+    </script>
+  </body>
+</html>
