@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 01</title>
+  </head>
+  <body>
+    <h1>Calcular média dos numeros somados</h1>
+    <label for="">Escrva um numero</label>
+    <input type="text" id="num1" /> + <input type="text" id="num2" /> <br />
+    escreva um numero que gostaria de fazer média da somar dos numeros:
+    <input type="text" id="num3" />
+    <button onclick="Calcular()">Calcular Media</button>
+    <div id="res"></div>
+    <script>
+      function Calcular() {
+        var input1 = window.document.querySelector("input#num1");
+        var input2 = window.document.querySelector("input#num2");
+        var input3 = window.document.querySelector("input#num3");
+        var resposta = window.document.querySelector("div#res");
+        var valor1 = Number(input1.value);
+        var valor2 = Number(input2.value);
+        var media = Number(input3.value);
+        var resultado = (valor1 + valor2) / media; // vai calcular a média
+
+        resposta.innerHTML = `A media dos numeros somados e ${resultado}`;
+      }
+    </script>
+  </body>
+</html>
