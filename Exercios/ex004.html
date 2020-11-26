@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 04</title>
+  </head>
+  <body>
+    <h1>Veficador de Idade</h1>
+    <label for="">Escreva seu nome:</label>
+    <input type="text" id="nome" />
+    <label for="">Escreva sua idade:</label>
+    <input type="text" id="idade" />
+    <button onclick="verificaIdade()">ver idade</button>
+    <div id="res"></div>
+    <script>
+      function verificaIdade() {
+        var input1 = window.document.querySelector("input#nome");
+        var input2 = window.document.querySelector("input#idade");
+        var resposta = window.document.querySelector("div#res");
+
+        var nome = input1.value;
+        var idade = input2.value;
+
+        if (idade < 18) {
+          resposta.innerHTML = `<p> O nome dele ${nome} e ele tem  <strong>${idade}</strong>
+             anos ainda e menor de idade</p> `;
+        } else {
+          resposta.innerHTML = `<p> O nome dele ${nome} e ele tem  <strong>${idade}</strong>
+             anos já e maior de idade </p>`;
+        }
+      }
+    </script>
+  </body>
+</html>
