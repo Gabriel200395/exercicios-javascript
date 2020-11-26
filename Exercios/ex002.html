@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 02</title>
+    <style>
+      .elements {
+        display: flex;
+        justify-content: center;
+        margin: 0px 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Verifcador de numeros.</h1>
+    <label for="">Escrva um numero</label>
+    <input type="text" id="num1" />
+    <input type="text" id="num2" />
+    <input type="text" id="num3" />
+    <input type="text" id="num4" />
+    <input type="text" id="num5" />
+    <button onclick="verNumeros()">Ver numeros</button>
+    <div id="res"></div>
+    <script>
+      function verNumeros() {
+        var input1 = window.document.querySelector("input#num1");
+        var input2 = window.document.querySelector("input#num2");
+        var input3 = window.document.querySelector("input#num3");
+        var input4 = window.document.querySelector("input#num4");
+        var input5 = window.document.querySelector("input#num5");
+        var resposta = window.document.querySelector("div#res");
+
+        var valor1 = input1.value;
+        var valor2 = input2.value;
+        var valor3 = input3.value;
+        var valor4 = input4.value;
+        var valor5 = input5.value;
+
+        resposta.innerHTML = `<div style="background:red; margin: 10px 14px; padding:60px 70px 60px 60px; width:0px; color: #fff; margin-bottom: 20px">${valor1}</div>
+        <div style="background:red; margin: 10px 14px; padding:60px 70px 60px 60px; width:0px; color: #fff; margin-bottom: 20px">${valor2}</div>
+        <div style="background:red; margin: 10px 14px; padding:60px 70px 60px 60px; width:0px; color: #fff; margin-bottom: 20px">${valor3}</div>
+        <div style="background:red; margin: 10px 14px; padding:60px 70px 60px 60px; width:0px; color: #fff; margin-bottom: 20px">${valor4}</div>
+        <div style="background:red; margin: 10px 14px; padding:60px 70px 60px 60px; width:0px; color: #fff; margin-bottom: 20px">${valor5}</div> `;
+
+        resposta.classList.add("elements");
+      }
+    </script>
+  </body>
+</html>
