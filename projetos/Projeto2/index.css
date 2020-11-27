@@ -9,9 +9,13 @@ body {
   flex-direction: column;
 }
 
+#res {
+  display: contents;
+}
+
 .home {
   width: 700px;
-  height: 200px;
+  height: 445px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.075);
@@ -31,6 +35,7 @@ body {
   width: 250px;
   height: 250px;
   object-fit: fill;
+  margin-top: 16px;
 }
 .title {
   margin-top: 60px;

@@ -14,26 +14,26 @@ function verificar() {
 
     if (buscarValorInput[0].checked) {
       genero = "Masculino";
-      if (idade >= 0 && idade < 10) {
-        img.src = "./Images/crianca-homem.jpg";
+      if (idade >= 0 && idade <= 10) {
+        img.setAttribute("src", "./Images/crianca-homem.jpg");
       } else if (idade >= 12 && idade < 30) {
-        img.src = "./Images/jovem-homem.jpg";
+        img.setAttribute("src", "./Images/jovem-homem.jpg");
       } else if (idade >= 30 && idade < 45) {
-        img.src = "./Images/adulto-homem.jpg";
+        img.setAttribute("src", "./Images/adulto-homem.jpg");
       } else {
-        img.src = "./Images/idoso-homem.jpg";
+        img.setAttribute("src", "./Images/idoso-homem.jpg");
       }
     } else if (buscarValorInput[1].checked) {
       genero = "Femenino";
 
-      if (idade >= 0 && idade < 10) {
-        img.src = "./Images/crianca-mulher.jpg";
+      if (idade >= 0 && idade <= 10) {
+        img.setAttribute("src", "./Images/crianca-mulher.jpg");
       } else if (idade >= 12 && idade < 30) {
-        img.src = "./Images/jovem-mulher.jpg";
+        img.setAttribute("src", "./Images/jovem-mullher.jpg");
       } else if (idade >= 30 && idade < 45) {
-        img.src = "./Images/adulta-mulher.jpg";
+        img.setAttribute("src", "./Images/adulta-mulher.jpg");
       } else {
-        img.src = "./Images/idosa-mulher.jpg";
+        img.setAttribute("src", "./Images/idosa-mulher.jpg");
       }
     }
     resposta.innerHTML = `A sua idade e ${idade} anos seu sexo ${genero}`;
