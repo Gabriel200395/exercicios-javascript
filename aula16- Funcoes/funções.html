@@ -6,36 +6,89 @@
     <title>Funções</title>
   </head>
   <body>
+    <form id="myform">
+      <input type="text" id="nome1" />
+      <input type="text" id="nome2" />
+      <input type="button" value="validar" onclick="verificar()" />
+    </form>
     <script>
-      /*    
-      function calcular(n1, n2) {
-        return n1 + n2;
-      }
+      var nome = "Gabrielw";
+      var nome1 = "Erika";
 
-      function calcular(n1 = 0, n2 = 0) {
-        return n1 + n2;
-      }
-
-      function parimp(n1) {
-        if (n1 % 2 == 0) {
-          return "par";
-        } else {
-          return "impar";
+      function validar(nome) {
+        if (nome === "Gabriel") {
+          return nome;
         }
       }
 
-      function fatorial(n1) {
-        if (n1 == 1) {
-          return 1;
-        } else {
-          return n1 * fatorial(n1 - 1);
+      function valida(nome1) {
+        if (nome1 === "Erika") {
+          return nome1;
         }
       }
 
-      console.log(fatorial(3));
-      console.log(parimp(2));
-      console.log(calcular(5));
+      function teste(validar, valida) {
+        if (validar && valida) {
+          console.log("dados corretos");
+        } else {
+          console.log("dados nao");
+        }
+      }
+
+      teste(validar(nome), valida(nome1));
+
+      /* function validar(valor1, valor2) {
+        if (valor1 == valor2) {
+          return true;
+        }
+      }
+
+      function verificar() {
+        var valor1 = document.getElementById("nome1").value;
+        var valor2 = document.getElementById("nome2").value;
+
+        if (validar(valor1, valor2)) {
+          console.log("valores sao iguais");
+        } else {
+          console.log("valores não são iguais");
+        }
+      }
       */
+
+      /*
+      metado 1
+      function validar(valor1, valor2) {
+        if (valor1 === valor2) {
+          console.log("dados sao iguais");
+        } else {
+          console.log("dados nao sao iguais");
+        }
+      }
+
+      function verificar() {
+        var valor1 = document.getElementById("nome1").value;
+        var valor2 = document.getElementById("nome2").value;
+                
+        validar(valor1, valor2);
+      }*/
+
+      /*
+      metado 2
+      function validar(verificar) {
+        return verificar;
+      }
+
+      function verificar() {
+        var valor1 = document.getElementById("nome1").value;
+        var valor2 = document.getElementById("nome2").value;
+
+        if (valor1 === valor2) {
+          console.log("dados sao iguais");
+        } else {
+          console.log("dados nao sao iguais");
+        }
+      }
+       */
     </script>
     <script src="./funcoes-parameterizada.js"></script>
   </body>

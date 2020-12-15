@@ -1,3 +1,5 @@
+/*
+
 let Gabriel = {
   idade: 25,
   estadoCivil: "casado",
@@ -15,7 +17,7 @@ function detalheGabriel(Gabriel) {
 
 detalheGabriel(Gabriel);
 
-/*
+
 let autores = [
   (autorA = {
     nome: "React Js",
