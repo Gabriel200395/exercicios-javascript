@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.nav-container {
+  background-color: red;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#logo {
+  color: #fff;
+  margin: 0px 16px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.menus-item {
+  display: flex;
+  margin: 0px 42px;
+  list-style: none;
+}
+
+.ativo {
+  color: #fff;
+  margin: 0px 15px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
