@@ -39,8 +39,8 @@
 // let pessoa = new Pessoa();
 // pessoa.andar("Gabriel");
 
-function Dom(seletor) {
-  const elements = document.querySelectorAll(seletor);
+function Dom(seletor, el) {
+  const elements = document.querySelectorAll(`${(seletor, el)}`);
   this.elements = elements;
   this.addClasse = function (classe) {
     elements.forEach((element) => element.classList.add(classe));
@@ -51,10 +51,10 @@ function Dom(seletor) {
 }
 
 //selecionar o elemento
-let dom = new Dom("li");
+let dom = new Dom(".lista", "li");
 dom.addClasse("ativo");
 
-let ul = new Dom("ul");
-ul.addClasse("ativa-lista");
+let li = new Dom("li");
+li.addClasse("ativa-lista");
 
-dom.removeClass("ativo");
+// dom.removeClass("ativo");
