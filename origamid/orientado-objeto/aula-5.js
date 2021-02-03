@@ -44,3 +44,13 @@ console.log(transacao1.slice(0, 7));
 // }
 
 // validaFrutas(frutas, "banana");
+
+const li = "li";
+li.repeat(5);
+
+let preco = "1200,00";
+console.log(preco.replace(",", "."));
+
+const nome1 = "Gabriel";
+
+console.log(nome1.toLocaleLowerCase() === "gabriel");
