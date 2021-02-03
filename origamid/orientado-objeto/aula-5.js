@@ -18,10 +18,9 @@ const livroAutor = livro.concat(linguagem);
 
 const listaFrutas = "melancia, banana, maçã";
 
-let fruta = "Banana";
-
 console.log(listaFrutas.includes("banana"));
 
+let fruta = "Banana";
 //verificar se existe ou não no começo
 console.log(fruta.startsWith("Ba"));
 
