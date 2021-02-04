@@ -30,3 +30,28 @@ console.log(Array.isArray(array));
 //reverse retonar o array invertido
 //shift remove o primeiro
 //shift remove o final
+//pop remove o final
+// join ele separar
+//slice server para clonar array
+
+let alunos = [
+  { media: 1 },
+  { media: 1 },
+  { media: 5 },
+  { media: 1 },
+  { media: 1 },
+];
+
+let maior = alunos.splice(2, 1);
+
+console.log(maior[0].media);
+console.log(
+  alunos.forEach((item) => {
+    console.log(item);
+  })
+);
+
+let transporte = ["carro", "caminhão"];
+let transporte1 = ["carro", "caminhão"];
+
+console.log(transporte.concat(transporte1));
