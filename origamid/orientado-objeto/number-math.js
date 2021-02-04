@@ -28,6 +28,8 @@ console.log(Math.round(numero));
 // redonda para cima
 console.log(Math.ceil(numero));
 
+let array = [1, 3, 4, 5];
+
 console.log(Math.max(10, 50, 60, 90));
 console.log(Math.min(10, 50, 60, 90));
 console.log(Math.floor(Math.random() * 100));
@@ -38,12 +40,10 @@ console.log(Math.floor(Math.random() * (40 - 20 + 1)) + 20);
 let aletorio = Math.floor(Math.random() * (2000 - 1050 + 1)) + 1050;
 console.log(aletorio);
 
-let array = [{ numero: 1 }, { numero: 50 }, { numero: 80 }, { numero: 70 }];
-array.forEach((item) => {
-  const n = item.numero;
-  const numeroMax = Math.min(n);
-  console.log(numeroMax);
-});
+const num = "1, 3, 4, 5, 610";
+const numArr = num.split(", ");
+const numeroM = Math.max(...numArr);
+console.log(numeroM);
 
 let Valores = ["R$ 59.99", "R$ 120.99", "R$ 60.79", "R$ 17.90"];
 
