@@ -17,7 +17,7 @@ const li = {
 };
 
 Li.prototype.ativo.call(li, "ativar");
-Li.prototype.add.call(li, "p");
+Li.prototype.add.call(li);
 
 // const li = document.querySelectorAll("li");
 
