@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form-Projeto</title>
+  </head>
+  <style>
+    .dm {
+      display: flex;
+      flex-direction: column;
+      margin: 7px;
+    }
+  </style>
+  <body>
+    <button class="btn"></button>
+    <section>
+      <form id="controle">
+        <label for="texto"></label>
+        <input type="text" name="texto" id="texto" />
+        <label for="height">heigth</label>
+        <input type="range" name="height" id="height" min="0" max="600" />
+        <label for="width"> width</label>
+        <input type="range" name="width" id="width" min="0" max="600" />
+        <label for="backgroundColor">background-color</label>
+        <input type="color" name="backgroundColor" id="backgroundColor" />
+        <label for="borderRadius">border-radius</label>
+        <input type="text" name="borderRadius" id="borderRadius" />
+        <label for="color">color</label>
+        <input type="color" name="color" id="color" />
+        <label for="border">border</label>
+        <input type="text" name="border" id="border" />
+      </form>
+    </section>
+    <div class="dm"></div>
+  </body>
+  <script src="./forms.js"></script>
+</html>

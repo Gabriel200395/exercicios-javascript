@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LocalStorage</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="nome" id="nome" />
+      <input type="text" name="idade" id="idade" />
+    </form>
+    <button id="form">Enviar</button>
+
+    <span></span>
+    <script>
+      const formUsuario = document.querySelector("#form");
+      formUsuario.addEventListener("click", enviarDados);
+      const dados = [];
+
+      function enviarDados() {
+        let nome = document.getElementById("nome").value;
+        let idade = document.getElementById("idade").value;
+
+        if (nome.length == 0 || nome.length == 0) {
+          alert("erro");
+        } else {
+          dados.push({ nome: nome, idade: idade });
+
+          if (Storage !== undefined) {
+            localStorage.setItem("dados1", JSON.stringify(dados));
+            console.log("enviamos dados ao Storage");
+          }
+        }
+        document.querySelector("form").reset();
+      }
+
+      window.addEventListener("load", enviarDataStorage);
+      function enviarDataStorage() {
+        if (localStorage.getItem("dados1")) {
+          const dados = JSON.parse(localStorage.getItem("dados1"));
+          console.log(dados);
+        }
+      }
+    </script>
+  </body>
+</html>
