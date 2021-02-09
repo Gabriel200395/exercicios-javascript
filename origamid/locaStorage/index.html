@@ -30,16 +30,22 @@
           if (Storage !== undefined) {
             localStorage.setItem("dados1", JSON.stringify(dados));
             console.log("enviamos dados ao Storage");
+            dados.forEach((item) => {
+              console.log(item);
+            });
           }
         }
+
         document.querySelector("form").reset();
       }
 
       window.addEventListener("load", enviarDataStorage);
       function enviarDataStorage() {
         if (localStorage.getItem("dados1")) {
-          const dados = JSON.parse(localStorage.getItem("dados1"));
-          console.log(dados);
+          const dadosLocalStotage = JSON.parse(localStorage.getItem("dados1"));
+          dadosLocalStotage.forEach((item) => {
+            console.log(item);
+          });
         }
       }
     </script>
