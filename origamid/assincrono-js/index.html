@@ -6,15 +6,37 @@
     <title>Promisses</title>
   </head>
   <body>
-    <!-- <form id="formCep">
+    <form>
       <input type="text" name="cep" id="cep" />
-      <input type="button" value="Buscar Cep" />
-    </form> -->
+      <input type="button" value="Buscar Cep" id="dados" />
+    </form>
+
+    <script>
+      const arr = [];
+      const button = document.querySelector("#dados");
+      const input = document.querySelector("#cep");
+      button.addEventListener("click", buscar);
+      function buscar(event) {
+        event.preventDefault();
+        validar(arr, input.value);
+      }
+
+      function validar(arr, valor) {
+        if (arr.indexOf(valor) === -1) {
+          arr.push(valor);
+          console.log(arr);
+          console.log("não existente");
+        } else if (arr.indexOf(valor) > -1) {
+          console.log("existente");
+        }
+      }
+    </script>
+    <!-- 
     <div id="res"></div>
-    <button id="proxima">Proxima Piada</button>
+    <button id="proxima">Proxima Piada</button> -->
     <!-- <div id="res"></div> -->
     <!-- <script src="./assicrono.js"></script> -->
     <!-- <script src="./cep.js"></script> -->
-    <script src="./async-await.js"></script>
+    <!-- <script src="./async-await.js"></script> -->
   </body>
 </html>
