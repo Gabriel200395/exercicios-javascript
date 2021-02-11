@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="cep" id="cep" />
+      <input type="button" value="buscarCep" id="dataCep" />
+    </form>
+    <div id="res"></div>
+    <script>
+      let cepArray = [];
+
+      const cepUser = document.querySelector("#cep");
+      const dataCep = document.querySelector("#dataCep");
+      dataCep.addEventListener("click", buscarCep);
+
+      function buscarCep(event) {
+        event.preventDefault();
+        dataCepUser(cepUser.value);
+      }
+
+      async function dataCepUser(cep) {
+        const cepData = fetch(`https://viacep.com.br/ws/${cep}/json/`);
+        const responseCep = await (await cepData).json();
+        mostrarCep(responseCep);
+      }
+
+      function mostrarCep(responseData) {
+        cepArray.push(responseData);
+        const resposta = document.querySelector("#res");
+        const dados = cepArray.map((item) => {
+          return `
+            <ul>
+              <li>${item.localidade}</li>
+              <li>${item.bairro}</li>
+              <li>${item.logradouro}</li>
+              <li>${item.siafi}</li>
+              <li>${item.uf}</li>
+              <li>${item.cep}</li>
+            </ul>        
+          `;
+        });
+
+        resposta.innerHTML = dados.join(" ");
+      }
+    </script>
+  </body>
+</html>

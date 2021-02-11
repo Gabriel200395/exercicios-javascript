@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Api filme</title>
+    <form>
+      <input type="text" id="buscarFilme" placeholder="buscarFilme" />
+    </form>
+    <div id="mostrarPeson"></div>
+    <script>
+      const personagens = document.querySelector("#mostrarPeson");
+      const buscar = document.querySelector("#buscarFilme");
+      let responsePerson = [];
+      buscar.addEventListener("keyup", pesquisa);
+
+      function pesquisa(event) {
+        const valorPeson = event.target.value;
+        const filterUsuario = responsePerson.filter((person) =>
+          person.name.includes(valorPeson)
+        );
+        mostrarPerson(filterUsuario);
+      }
+
+      async function buscarData() {
+        const dataPerson = fetch(
+          "https://www.breakingbadapi.com/api/characters?limit=10&offset=10"
+        );
+        responsePerson = await (await dataPerson).json();
+        mostrarPerson(responsePerson);
+      }
+
+      function mostrarPerson(array) {
+        const dadosPerson = array.map((item) => {
+          return `
+             <ul>
+               <li>${item.name}</li>
+             </ul>
+           `;
+        });
+        personagens.innerHTML = dadosPerson.join(" ");
+        return array;
+      }
+
+      buscarData();
+    </script>
+  </head>
+  <body></body>
+</html>
