@@ -57,6 +57,38 @@
       // elementoDom.criarElement("ul");
       // elementoDom.criarTexto("Olá eu sou uma lista");
       // elementoDom.addElemento();
+
+      // const array = ["Gabriel"];
+      // function dados() {
+      //   return {
+      //     array,
+      //   };
+      // }
+
+      // function pegarDados() {
+      //   const { array } = dados();
+      //   console.log(array);
+      // }
+
+      // pegarDados();
+
+      const array = {
+        arr: [
+          {
+            nome: "Gabriel",
+          },
+        ],
+
+        uf: {
+          estado: "DF",
+        },
+      };
+
+      const {
+        arr: [{ nome }],
+        uf: { estado },
+      } = array;
+      console.log(nome, estado);
     </script>
   </body>
 </html>
