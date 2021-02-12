@@ -63,4 +63,5 @@ class Button {
 const buttonBlue = new Button("blue", "clicar");
 
 buttonBlue.createButton = "div";
+
 buttonBlue.createButton;
